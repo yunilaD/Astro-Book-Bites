@@ -2,7 +2,7 @@
 import type { CollectionEntry } from "astro:content";
 
 interface Props {
-	book: CollectionEntry<"books">;
+    book: CollectionEntry<"books">;
 }
 
 const { book } = Astro.props;
@@ -12,7 +12,7 @@ const { book } = Astro.props;
     <p class="book-title">{book.data.title}, {book.data.rating}/10</p>
     <p class="book-author">by {book.data.author}</p>
     <p class="book-summary">{book.data.summary}</p>
-    <a href="">Read Review</a>
+    <a href={`/books/${book.id}`}>Read Review</a>
 </div>
 
 <style>
