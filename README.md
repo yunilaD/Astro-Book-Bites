@@ -16,6 +16,7 @@ A modern and responsive bookstore landing page built with **Astro** by following
 - Astro
 - HTML
 - CSS
+- TypeScript
 - JavaScript
 
 ## Project Structure
