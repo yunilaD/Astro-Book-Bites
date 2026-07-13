@@ -1,9 +1,24 @@
 ---
-import BaseLayout from '../../layouts/BaseLayout.astro'
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import BookCard from "../../components/BookCard.astro";
+
+interface Book {
+	title: string;
+	author: string;
+}
+
+const books: Book[] = [
+	{ title: "The Name of The Wind", author: "Patrick Rothfuss" },
+	{ title: "The Final Empire", author: "Brandon Sanderson" },
+	{ title: "The Blade Itself", author: "Joe Abercrombie" },
+	{ title: "The Will of the Many", author: "James Islington" },
+];
 ---
 
 <BaseLayout>
 	<div class="content">
 		<h2>Books</h2>
+		{books.map((book) => <BookCard book={book} />)}
+		{!books.length && <p>No books to show.</p>}
 	</div>
 </BaseLayout>
